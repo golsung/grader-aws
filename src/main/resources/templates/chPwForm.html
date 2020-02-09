@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--  <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">  -->
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+<title id="title">성적조회시스템</title>
+</head>
+	<body>
+		<div class="container">
+    		<form method="post" th:action="@{/updatePw}" th:object="${pwInfo}">
+        		<h2>비밀번호변경</h2>
+        		<input type="text" name="mail" th:value="*{mail}" placeholder="사용자 메일" required="required" autofocus="autofocus"/>
+        		<input type="password" name="pw1" th:value="*{pw1}" placeholder="새 비밀번호" required="required" />
+         		<input type="password" name="pw2" th:value="*{pw2}" placeholder="비밀번호확인" required="required"/>
+        		<button type="submit">OK</button>
+    		</form>
+		</div>
+		<a th:href="@{/logout}">로그아웃</a>
+	</body>
+</html>

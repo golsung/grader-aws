@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+<title id="title1">성적 입력</title>
+</head>
+<body>
+	<p>Welcome</p>
+	<table th:inline="text">
+		<!--  <tr th:object="${student}">
+			<td><label for="mail">이메일</label></td>
+			<td>[[*{mail}]]</td>
+			<td><label for="name">이름</label></td>
+			<td>[[*{name}]]</td>
+			<td><label for="major">전공</label></td>
+			<td>[[*{major}]]</td>
+		</tr> 	-->
+		<tr>
+			<td><label for="mail">메일</label></td>
+			<td>[[${mail}]]</td>
+				<td><label for="name">이름</label></td>
+			<td>[[${name}]]</td>
+			<td><label for="pwd1">현비번</label></td>
+			<td>[[${pw1}]]</td>
+			<td><label for="pwd2">새비번</label></td>
+			<td>[[${pw2}]]</td>
+		</tr> 
+	</table>
+	<a th:href="@{/logout}">로그아웃</a>
+</body>
+</html>

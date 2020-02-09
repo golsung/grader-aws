@@ -1,0 +1,19 @@
+version: '3'
+services:
+  docker-mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=insang
+      - MYSQL_DATABASE=testdb
+      - MYSQL_USER=insang
+      - MYSQL_PASSWORD=insang
+      
+  my-jpa-app:
+    image: gradersql
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - docker-mysql
+    ports:
+      - 8082:8081

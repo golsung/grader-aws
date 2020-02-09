@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+<title id="title">나의 성적</title>
+</head>
+<body>
+	<p>Welcome</p>
+	<table th:inline="text">	
+		<tr>
+			<td><label>이름</label></td><td>[[${name}]]</td>		
+		</tr> 
+		<tr>
+			<td><label>메일</label></td><td>[[${mail}]]</td>		
+		</tr> 
+			<tr>
+			<td><label>중간점수</label></td><td>[[${midScore}]]</td>		
+		</tr> 
+			<tr>
+			<td><label>기말점수</label></td><td>[[${finalScore}]]</td>		
+		</tr> 
+			<tr>
+			<td><label>과제점수</label></td><td>[[${hwScore}]]</td>		
+		</tr> 
+			<tr>
+			<td><label>학점</label></td><td>[[${grade}]]</td>		
+		</tr> 
+	</table>
+	<a th:href="@{/changePw}">비밀번호변경</a>
+	<a th:href="@{/logout}">로그아웃</a>
+</body>
+</html>
